@@ -1,13 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function Welcome({navigation, route}) {
+export default function BlåStörreText({navigation, route}) {
     return (
         <View style={styles.container}>
-            <Text>Detta är ett test</Text>
-            <Button title='blåbackgrund' onPress={() => {
-                navigation.navigate("Blå");
-            }}/>
+            <Text style={{color: 'white', fontSize: 20}}>This is a bigger text and blue background</Text>
             <StatusBar style="auto" />
         </View>
     );
@@ -16,7 +13,8 @@ export default function Welcome({navigation, route}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        fontSize: 30,
+        backgroundColor: '#00f',
         alignItems: 'center',
         justifyContent: 'center',
     },

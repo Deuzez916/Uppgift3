@@ -1,13 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function Welcome({navigation, route}) {
+export default function blueBackground({navigation, route}) {
     return (
         <View style={styles.container}>
-            <Text>Detta är ett test</Text>
-            <Button title='blåbackgrund' onPress={() => {
-                navigation.navigate("Blå");
-            }}/>
+            <Text style={{color: 'white'}} onPress={() => {
+                navigation.navigate("BlåStörreText");
+            }}>This is a text with a blue backgroundcolor</Text>
             <StatusBar style="auto" />
         </View>
     );
@@ -16,12 +15,11 @@ export default function Welcome({navigation, route}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#00f',
         alignItems: 'center',
         justifyContent: 'center',
     },
 });
-
 
 // * Lägg till navigering i projektet
 // * Gör en statisk FlatList i StartVy med tre rader "Apelsinjuice", "Banansmoothie", "Cider"
