@@ -1,11 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import Welcome from './Welcome';
-import blueBackground from './blueBackground';
-import BlåStörreText from './blueBackgroundBiggerText';
-import BlueBiggerText from './blueBackgroundBiggerText';
+import blueBackground from './BlueBackground';
+import BlueBiggerText from './BlueBackgroundBiggerText';
 
 export default function App() {
   

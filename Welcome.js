@@ -1,12 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 
 export default function Welcome({navigation, route}) {
+
     return (
         <View style={styles.container}>
             <Button title='Blue Background' onPress={() => {
                 navigation.navigate("BlueBackground");
             }}/>
+            <FlatList
+                data={[
+                    {Drinks: 'Orange Juice'},
+                    {Drinks: 'Banana Smoothie'},
+                    {Drinks: 'Cider'},
+                ]}
+            renderItem={({item}) =>
+                <Text>{item.Drinks}</Text>}
+            />
+
             <StatusBar style="auto" />
         </View>
     );
